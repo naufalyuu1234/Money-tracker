@@ -10,6 +10,7 @@ import {
 
 // Display
 import Overview from "./display/dashboard/Overview";
+import Budgets from "./display/budgets/Budgets";
 
 // Dashboard link
 const dashboardLinks = [
@@ -22,7 +23,6 @@ const mainLinks = [
   { href: "/budgets", label: "Budgets" },
   { href: "/reports", label: "Reports" },
 ];
-
 
 export default function App() {
   const location = useLocation();
@@ -75,11 +75,11 @@ export default function App() {
 
       {/* Routes */}
       <Routes>
-         <Route path="/" element={<Navigate to="/overview" replace />} />
+        <Route path="/" element={<Navigate to="/overview" replace />} />
         <Route path="/overview" element={<Overview />} />
-        {/* <Route path="/transactions" element={<Transactions />} />
+        {/* <Route path="/transactions" element={<Transactions />} /> */}
         <Route path="/budgets" element={<Budgets />} />
-        <Route path="/reports" element={<Reports />} /> */}
+        {/* <Route path="/reports" element={<Reports />} /> */}
       </Routes>
     </div>
   );

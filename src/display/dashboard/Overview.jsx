@@ -45,9 +45,9 @@ const Header = ({ totalBalance, onAddTransaction }) => {
             <h1 className="text-xl md:text-2xl font-bold text-white">
               Money Tracker
             </h1>
-            <p className="text-emerald-100 text-xs flex items-center gap-1">
-              <TrendingUp className="w-3 h-3" />
-              <span className="truncate">
+            <p className="text-emerald-100 text-xs flex items-center gap-1 mt-1">
+              <TrendingUp className="w-3 h-3 mt-0.5 flex-shrink-0" />
+              <span className="flex-1 leading-tight">
                 Tidak harus menjadi kaya untuk menabung
               </span>
             </p>
