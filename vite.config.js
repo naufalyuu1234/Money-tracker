@@ -10,23 +10,23 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-    build: {
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            // Memisahkan library node_modules menjadi file tersendiri
-            if (id.includes("node_modules")) {
-              return id
-                .toString()
-                .split("node_modules/")[1]
-                .split("/")[0]
-                .toString();
-            }
-          },
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Memisahkan library node_modules menjadi file tersendiri
+          if (id.includes("node_modules")) {
+            return id
+              .toString()
+              .split("node_modules/")[1]
+              .split("/")[0]
+              .toString();
+          }
         },
       },
-      // Opsional: naikkan limit warning jika kamu tidak keberatan dengan ukuran file
-      chunkSizeWarningLimit: 1000,
     },
+    // Opsional: naikkan limit warning jika kamu tidak keberatan dengan ukuran file
+    chunkSizeWarningLimit: 1000,
   },
 });
