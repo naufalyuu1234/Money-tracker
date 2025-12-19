@@ -11,6 +11,7 @@ import {
 // Display
 import Overview from "./display/dashboard/Overview";
 import Budgets from "./display/budgets/Budgets";
+import Reports from "./display/reports/Reports";
 
 // Dashboard link
 const dashboardLinks = [
@@ -79,7 +80,7 @@ export default function App() {
         <Route path="/overview" element={<Overview />} />
         {/* <Route path="/transactions" element={<Transactions />} /> */}
         <Route path="/budgets" element={<Budgets />} />
-        {/* <Route path="/reports" element={<Reports />} /> */}
+        <Route path="/reports" element={<Reports />} />
       </Routes>
     </div>
   );
